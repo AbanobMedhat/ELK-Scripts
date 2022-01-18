@@ -1,0 +1,1 @@
+curl --insecure -v https://127.0.0.1 2>&1 | awk 'BEGIN { cert=0 } /^\* Server certificate:/ { cert=1 } /^\*/ { if (cert) print }'
